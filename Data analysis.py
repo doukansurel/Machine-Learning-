@@ -159,8 +159,8 @@ from sklearn.preprocessing import StandardScaler
 
 sc=StandardScaler()
 
-X_train = sc.fit_transform(x_train)
-X_test = sc.transform(x_test)
+X_train = sc.fit_transform(x_train.values.reshape(1,-1))
+X_test = sc.transform(x_test.values.reshape(1,-1))
 
 
 # In[ ]:
